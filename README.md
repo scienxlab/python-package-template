@@ -63,11 +63,11 @@ The docs are written in Markdown, with the top-level index written in RST. The d
     cd docs
     make html
 
-The `myst-nb` plugin for Sphinx should allow you to mix RST, Markdown, and Jupyter Notebooks in your documentation.
+The []`myst-nb` plugin](https://myst-nb.readthedocs.io/en/latest/) for Sphinx should allow you to mix RST, Markdown, and Jupyter Notebooks in your documentation.
 
 This package uses [the Furo theme](https://pradyunsg.me/furo/), but it's easy enough to change options like this in `docs/conf.py`.
 
-The documentation builds as a GitHub Action and [is deployed here](https://congenial-memory-0cabab8f.pages.github.io/).
+The documentation builds as [a GitHub Action](https://github.com/scienxlab/python-package-template/blob/main/.github/workflows/publish-docs.yml) and [is deployed here](http://scienxlab.org/python-package-template/).
 
 
 ## Continuous integration
