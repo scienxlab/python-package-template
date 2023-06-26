@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=65.0", "setuptools-scm>=7.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypackage"
+authors = [{ name="mypackage authors"},]
+description = "A GitHub template for Python packages."
+dynamic = ["version"]
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+keywords = ["open source", "templates"]
+readme = "README.md"
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Development Status :: 3 - Alpha",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "click",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "pylint",
+    "mypy",
+    "build",
+    "pytest",
+    "coverage[toml]",
+    "pytest-cov",
+    "sphinx",
+    "sphinxcontrib-apidoc",
+    "furo",
+    "myst_nb",
+]
+
+[project.scripts]
+mycli = "mypackage.cli:cli"
+
+[project.urls]
+"repository" = "https://github.com/scienxlab/python-package-template"
+
+[tool.setuptools_scm]
+# Write version to file for better start performance, eg of CLI.
+# See https://github.com/pypa/setuptools_scm/issues/793
+# Do not include the _vesion.py file in source control.
+write_to = "src/mypackage/_version.py"
+
+[tool.pytest.ini_options]
+# http://doc.pytest.org/en/latest/customize.html
+addopts = "--doctest-modules --ignore=docs --cov=mypackage"
+
+[tool.coverage.run]
+# https://coverage.readthedocs.io/en/latest/config.html
+omit = [
+    "src/mypackage/__init__.py",
+    "src/mypackage/__main__.py",
+    "src/mypackage/_version.py",
+]
