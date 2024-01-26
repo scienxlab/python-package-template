@@ -37,8 +37,6 @@ To install the package, before or after changing its name, you can use `pip inst
 
 To build an `sdist` and `wheel` for `pip` to install (it can use either; wheels are the 'modern' way), you can do `python -m build`. 
 
-Note: building the project makes a file called `src/mypackage/_version.py` which must not be checked into version control, hence it is included in `.gitignore`.
-
 
 ## Command line interface
 
@@ -63,7 +61,7 @@ The docs are written in Markdown, with the top-level index written in RST. The d
     cd docs
     make html
 
-The []`myst-nb` plugin](https://myst-nb.readthedocs.io/en/latest/) for Sphinx should allow you to mix RST, Markdown, and Jupyter Notebooks in your documentation.
+The [`myst-nb` plugin](https://myst-nb.readthedocs.io/en/latest/) for Sphinx should allow you to mix RST, Markdown, and Jupyter Notebooks in your documentation.
 
 This package uses [the Furo theme](https://pradyunsg.me/furo/), but it's easy enough to change options like this in `docs/conf.py`.
 
@@ -76,6 +74,8 @@ The package uses GitHub Actions for the automation of [continuous integration](h
 
 - `build_test.yml` &mdash; build and test the distribution using `pytest`.
 - `publish-docs.yml` &mdash; build and publish the documentation to GitHub pages. Note that this requires you to anble GitHub package on your repo.
+
+There is also a disabled workflow for publishing to PyPI, see below.
 
 
 ## Publishing to PyPI
