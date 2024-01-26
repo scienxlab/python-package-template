@@ -49,10 +49,7 @@ mycli = "mypackage.cli:cli"
 "repository" = "https://github.com/scienxlab/python-package-template"
 
 [tool.setuptools_scm]
-# Write version to file for better start performance, eg of CLI.
-# See https://github.com/pypa/setuptools_scm/issues/793
-# Do not include the _vesion.py file in source control.
-write_to = "src/mypackage/_version.py"
+# This section is empty but required for dynamic versioning.
 
 [tool.pytest.ini_options]
 # http://doc.pytest.org/en/latest/customize.html
