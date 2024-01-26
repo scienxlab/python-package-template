@@ -28,7 +28,7 @@ Then search and replace the placeholder names with your project's names. This wi
 - `mycli`
 - `myfunction`
 
-You should alos change `LICENSE` if you want to use a different one, and the content of `AUTHORS.md`.
+You should also change `LICENSE` if you want to use a different one, and the content of `AUTHORS.md`.
 
 
 ## Installing and building
